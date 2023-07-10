@@ -1,3 +1,5 @@
+package example;
+
 public class HandlerThreadMain {
 
     public static void main(String[] args) {
