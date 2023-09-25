@@ -7,6 +7,7 @@ public class Main2 {
     public static void main(String[] args) {
         Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("1000000000"))); // 큰 숫자를 넣고 실행하면 계산에 오랜시간이 걸려 LongComputationTask 함수가 interrupt를해도 멈추지 않는다.
 
+        //thread.setDaemon(true); // main 스레드만 종료되어도 전체 앱이 종료 된다.
         thread.start();
         thread.interrupt();
     }
