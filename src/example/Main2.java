@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main3 {
-    public static void main(String[] args) {
+public class Main2 {
+    public static void main(String[] args) throws InterruptedException {
         List<Long> inputNumbers = Arrays.asList(0L, 3435L, 35435L, 2324L, 4656L, 23L, 5556L);
 
         List<ThreadCon> threads = new ArrayList<>();
@@ -17,6 +17,10 @@ public class Main3 {
 
         for (Thread thread : threads) {
             thread.start();
+        }
+
+        for (Thread thread : threads) {
+            thread.join(2000); //스레드에 기다릴 시간을 추가해 계산 하나가 제시간에 완료되지 않아도 되는 문제 해결
         }
 
         for (int i = 0; i < inputNumbers.size(); i++) {
