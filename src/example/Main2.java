@@ -20,6 +20,7 @@ public class Main2 {
         }
 
         for (Thread thread : threads) {
+            //thread.setDaemon(true); // 데몬스레드를 true를 주면 main 스레드만 종료되어도 전체 앱이 종료 된다.
             thread.join(2000); //스레드에 기다릴 시간을 추가해 계산 하나가 제시간에 완료되지 않아도 되는 문제 해결
         }
 
