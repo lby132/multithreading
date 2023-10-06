@@ -14,10 +14,11 @@ public class Main4 {
         decrementingThread.join();
 
         System.out.println("We currently have " + inventoryCounter.getItems() + " items");
+
     }
 
     private static class DecrementingThread extends Thread {
-        private InventoryCounter inventoryCounter;
+        private final InventoryCounter inventoryCounter;
         public DecrementingThread(InventoryCounter inventoryCounter) {
             this.inventoryCounter = inventoryCounter;
         }
@@ -32,7 +33,7 @@ public class Main4 {
 
     private static class IncrementingThread extends Thread {
 
-        private InventoryCounter inventoryCounter;
+        private final InventoryCounter inventoryCounter;
 
         public IncrementingThread(InventoryCounter inventoryCounter) {
             this.inventoryCounter = inventoryCounter;
