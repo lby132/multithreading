@@ -11,6 +11,7 @@ public class Main4 {
         incrementingThread.join();
 
         decrementingThread.start();
+
         decrementingThread.join();
 
         System.out.println("We currently have " + inventoryCounter.getItems() + " items");
