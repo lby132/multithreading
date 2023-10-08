@@ -14,6 +14,7 @@ public class Main5 {
         decrementingThread.join();
 
         System.out.println("We currently have " + inventoryCounter.getItems() + " items");
+        System.out.println("decrementingThread = " + decrementingThread);
 
     }
 
